@@ -21,7 +21,7 @@ def get_dish(id):
     return jsonify(asdict(dish)), HTTPStatus.OK
 
 # READ ALL
-@dish_bp.route('/all_dishes', methods=['GET'])
+@dish_bp.route('/', methods=['GET'])
 def get_dishes():
     all_dishes = DishService.get_dishes()
 
