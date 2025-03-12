@@ -14,6 +14,16 @@
       "post": {
         "summary": "Create a new dish",
         "description": "Return",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "item",
+            "description": "Item a ser criado",
+            "schema": {
+              "$ref": "#/definitions/Dish"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Resposta bem-sucedida",

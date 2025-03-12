@@ -4,6 +4,7 @@ from api_cardapio.models.models import db
 from  flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
+
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
 
