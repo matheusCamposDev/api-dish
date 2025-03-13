@@ -6,8 +6,8 @@ Este projeto é um CRUD usando Flask de um cardápio para restaurantes. A finali
 # How to Run Locally | Como rodar localmente
 - Make sure you have Poetry installed on your machine
 - Have a compatible version of Python 3.13 or higher installed
-- To install the project dependencies: poetry install
-- To start the API: poetry run flask --app api_cardapio run --debug
+- To install the project dependencies: `poetry install`
+- To start the API: `poetry run flask --app api_cardapio run --debug`
 - The API URL will be: http://127.0.0.1:5000/swagger/
 - Test it
 
