@@ -20,7 +20,7 @@
             "name": "item",
             "description": "Item a ser criado",
             "schema": {
-              "$ref": "#/definitions/Dish"
+              "$ref": "#/definitions/dish_post"
             }
           }
         ],
@@ -168,6 +168,26 @@
           "type": "integer",
           "example": 1
         },
+        "name": {
+          "type": "string",
+          "example": "string"
+        },
+        "description": {
+          "type": "string",
+          "example": "string"
+        },
+        "price": {
+          "type": "number",
+          "example": 0
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "dish_post": {
+      "type": "object",
+      "properties": {
         "name": {
           "type": "string",
           "example": "string"
