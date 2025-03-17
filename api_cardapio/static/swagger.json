@@ -49,10 +49,13 @@
         "description": "Return",
         "responses": {
           "200": {
-            "description": "Resposta bem-sucedida",
+            "description": "Return a list empty or a list of dishes",
             "schema": {
-              "type": "object",
+              "type": "array",
               "properties": {
+                "id": {
+                  "type": "number"
+                },
                 "name": {
                   "type": "string"
                 },
@@ -63,6 +66,9 @@
                   "type": "string"
                 }
               }
+            },
+            "examples": {
+              "application/json": []
             }
           }
         }
@@ -107,7 +113,7 @@
             "name": "item",
             "description": "Item atualizado",
             "schema": {
-              "$ref": "#/definitions/Dish"
+              "$ref": "#/definitions/dish"
             }
           }
         ],
@@ -161,7 +167,7 @@
     }
   },
   "definitions": {
-    "Dish": {
+    "dish": {
       "type": "object",
       "properties": {
         "id": {
