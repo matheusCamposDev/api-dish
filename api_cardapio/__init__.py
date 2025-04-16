@@ -7,6 +7,8 @@ import os
 
 app = Flask(__name__)
 
+API_URL = 'https://api-dish.onrender.com/static/swagger.json',
+
 CORS(app)
 
 SWAGGER_URL = '/swagger'
@@ -14,7 +16,7 @@ API_URL = '/static/swagger.json'
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
-    API_URL = 'https://api-dish.onrender.com/static/swagger.json',
+    API_URL,
     config= {
         'app_name': "Cardápio"
     }
