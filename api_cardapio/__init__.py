@@ -34,7 +34,7 @@ with app.app_context():
 from api_cardapio.routes.dish import dish_bp
 
 app.register_blueprint(dish_bp)
-app.register_blueprint(swaggerui_blueprint)
+app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 
 if __name__ == "__main__":
 
