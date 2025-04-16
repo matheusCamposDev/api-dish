@@ -2,9 +2,12 @@ from flask_migrate import Migrate
 from flask import Flask
 from api_cardapio.models.models import db
 from  flask_swagger_ui import get_swaggerui_blueprint
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+
+CORS(app)
 
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
