@@ -14,7 +14,7 @@ API_URL = '/static/swagger.json'
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
-    API_URL,
+    API_URL = 'https://api-dish.onrender.com/static/swagger.json',
     config= {
         'app_name': "Cardápio"
     }
