@@ -7,9 +7,7 @@ import os
 
 app = Flask(__name__)
 
-API_URL = 'https://api-dish.onrender.com/static/swagger.json',
-
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://api-dish.onrender.com"}})
 
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
