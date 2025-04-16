@@ -5,6 +5,11 @@
     "description": "API feita em flask que simula um cardápio de restaurante",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://api-dish.onrender.com"
+    }
+  ],
   "host": "127.0.0.1:5000",
   "schemes": [
     "http"
