@@ -1,0 +1,215 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Menu de Restaurante",
+    "description": "API feita em flask que simula um cardápio de restaurante",
+    "version": "1.0.0"
+  },
+  "host": "127.0.0.1:5000",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/dish": {
+      "post": {
+        "summary": "Create a new dish",
+        "description": "Return",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "item",
+            "description": "Item a ser criado",
+            "schema": {
+              "$ref": "#/definitions/dish_post"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all dishes",
+        "description": "Return",
+        "responses": {
+          "200": {
+            "description": "Return a list empty or a list of dishes",
+            "schema": {
+              "type": "array",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "application/json": []
+            }
+          }
+        }
+      }
+    },
+    "/dish/{id}": {
+      "get": {
+        "summary": "Get a dish by id",
+        "description": "Return",
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modify a dish by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do item"
+          },
+          {
+            "in": "body",
+            "name": "item",
+            "description": "Item atualizado",
+            "schema": {
+              "$ref": "#/definitions/dish"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "format": "float",
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT FOUND"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a dish by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do item"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO CONTENT"
+          },
+          "404": {
+            "description": "NOT FOUND"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "dish": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "string"
+        },
+        "description": {
+          "type": "string",
+          "example": "string"
+        },
+        "price": {
+          "type": "number",
+          "example": 0
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "dish_post": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "string"
+        },
+        "description": {
+          "type": "string",
+          "example": "string"
+        },
+        "price": {
+          "type": "number",
+          "example": 0
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+}
