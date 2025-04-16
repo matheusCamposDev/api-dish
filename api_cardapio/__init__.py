@@ -2,6 +2,7 @@ from flask_migrate import Migrate
 from flask import Flask
 from api_cardapio.models.models import db
 from  flask_swagger_ui import get_swaggerui_blueprint
+import os
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
     }
 )
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cardapio.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"]
 
 db.init_app(app)
 
