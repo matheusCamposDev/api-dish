@@ -49,8 +49,8 @@ A autenticação é realizada por meio dos endpoints `/auth/signup` ou `/auth/si
 
 4. Acesse a aplicação:
 
-- API: http://localhost:5000
-- Swagger: http://localhost:5000/swagger
+- API: Running on http://127.0.0.1:5000
+- Swagger: Running on http://127.0.0.1:5000/swagger
 
 
 # Como usar
