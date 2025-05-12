@@ -6,8 +6,6 @@ info:
   contact:
     email: theuscampos45@gmail.com
   version: 1.0.0
-servers:
-  - url: http://127.0.0.1:5000/
 tags:
   - name: Dishes
     description: Operations for creating, reading, updating and removing dishes in the system.
